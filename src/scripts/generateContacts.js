@@ -5,9 +5,9 @@ import { readContacts } from '../utils/readContacts.js';
 const generateContacts = async (number) => {
   try {
     const contactsList = await readContacts();
-    const newContact = createFakeContact();
 
     for (let i = 0; i < number; i++) {
+      const newContact = createFakeContact();
       contactsList.push(newContact);
     }
 
